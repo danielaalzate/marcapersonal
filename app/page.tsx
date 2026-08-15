@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type Market = "ES" | "CO";
 
@@ -13,6 +13,92 @@ const marketCopy = {
 
 function WhatsAppLink({ children, message, className = "" }: { children: React.ReactNode; message: string; className?: string }) {
   return <a className={className} href={`${whatsappBase}${encodeURIComponent(message)}`} target="_blank" rel="noreferrer">{children}</a>;
+}
+
+function NetworkField() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const context = canvas.getContext("2d");
+    if (!context) return;
+
+    const palette = ["#A1C3E1", "#E7254F", "#FF7A00", "#FFEE49", "#B2D235", "#FFFFFF"];
+    const nodes = Array.from({ length: 23 }, (_, index) => ({
+      x: (index * 47 + 13) % 100,
+      y: (index * 31 + 17) % 100,
+      size: 1.5 + (index % 4) * 0.7,
+      color: palette[index % palette.length],
+      drift: 0.25 + (index % 5) * 0.09,
+    }));
+    const pointer = { x: -999, y: -999 };
+    let frame = 0;
+    let scrollPosition = window.scrollY;
+
+    const resize = () => {
+      const rect = canvas.getBoundingClientRect();
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = rect.width * ratio;
+      canvas.height = rect.height * ratio;
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    };
+    const onPointerMove = (event: PointerEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      pointer.x = event.clientX - rect.left;
+      pointer.y = event.clientY - rect.top;
+    };
+    const onPointerLeave = () => { pointer.x = -999; pointer.y = -999; };
+    const onScroll = () => { scrollPosition = window.scrollY; };
+    const draw = (time: number) => {
+      const rect = canvas.getBoundingClientRect();
+      const width = rect.width;
+      const height = rect.height;
+      context.clearRect(0, 0, width, height);
+      const points = nodes.map((node, index) => {
+        const pulse = Math.sin(time * 0.0007 * node.drift + index) * 1.5;
+        return {
+          ...node,
+          px: (node.x / 100) * width + Math.sin(time * 0.00025 * node.drift + index) * 18,
+          py: (node.y / 100) * height + Math.cos(time * 0.00023 * node.drift + index) * 14 - (scrollPosition % 210) * 0.12 + pulse,
+        };
+      });
+      context.lineWidth = 0.7;
+      points.forEach((point, index) => {
+        points.slice(index + 1).forEach((other) => {
+          const distance = Math.hypot(point.px - other.px, point.py - other.py);
+          if (distance < 155) {
+            context.strokeStyle = `rgba(161, 195, 225, ${0.23 * (1 - distance / 155)})`;
+            context.beginPath(); context.moveTo(point.px, point.py); context.lineTo(other.px, other.py); context.stroke();
+          }
+        });
+      });
+      points.forEach((point) => {
+        const distance = Math.hypot(point.px - pointer.x, point.py - pointer.y);
+        const boost = distance < 115 ? (1 - distance / 115) * 4 : 0;
+        context.beginPath();
+        context.fillStyle = point.color;
+        context.arc(point.px, point.py, point.size + boost, 0, Math.PI * 2);
+        context.fill();
+      });
+      frame = requestAnimationFrame(draw);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    canvas.addEventListener("pointermove", onPointerMove);
+    canvas.addEventListener("pointerleave", onPointerLeave);
+    frame = requestAnimationFrame(draw);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("resize", resize);
+      window.removeEventListener("scroll", onScroll);
+      canvas.removeEventListener("pointermove", onPointerMove);
+      canvas.removeEventListener("pointerleave", onPointerLeave);
+    };
+  }, []);
+
+  return <canvas ref={canvasRef} className="network-canvas" aria-hidden="true" />;
 }
 
 export default function Home() {
@@ -36,7 +122,7 @@ export default function Home() {
           <p className="hero-intro">Creo páginas web y estrategias digitales para escuelas, festivales, artistas e instituciones culturales que quieren conectar mejor con sus públicos y crecer con claridad.</p>
           <div className="hero-actions"><WhatsAppLink className="button button-primary" message={marketMessage}>Hablemos de tu proyecto <span aria-hidden="true">↗</span></WhatsAppLink><a className="text-link" href="#servicios">Explorar servicios <span aria-hidden="true">↓</span></a></div>
         </div>
-        <div className="hero-art" aria-label="Monograma Daniela Alzate"><div className="orb orb-one" /><div className="orb orb-two" /><div className="hero-monogram"><span>D</span><span>A</span><span>A</span></div><p>Daniela Alzate<br />Estrategia digital<br />para la cultura</p></div>
+        <div className="hero-art" aria-label="Monograma Daniela Alzate"><NetworkField /><div className="orb orb-one" /><div className="orb orb-two" /><div className="hero-monogram"><span>D</span><span>A</span><span>A</span></div><p>Daniela Alzate<br />Estrategia digital<br />para la cultura</p></div>
       </section>
 
       <section className="intro-band"><p>Más de una década entre <strong>teatros, públicos, patrocinios</strong> y proyectos digitales.</p><span>↘</span><p>Una mirada estratégica para hacer que las organizaciones culturales se vean, se entiendan y se elijan.</p></section>
