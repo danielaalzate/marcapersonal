@@ -144,6 +144,23 @@ export default function Home() {
       <section className="process" id="proceso"><div className="process-intro"><p className="eyebrow">04 — CÓMO TRABAJAMOS</p><h2>De la conversación<br />a la pantalla.</h2></div><ol><li><span>01</span><div><h3>Conversamos</h3><p>Una primera conversación gratuita para entender tu organización, tu público y tus objetivos.</p></div></li><li><span>02</span><div><h3>Definimos la propuesta</h3><p>Recibes un alcance, calendario e inversión construidos para lo que realmente necesitas.</p></div></li><li><span>03</span><div><h3>Creamos y afinamos</h3><p>Diseño, contenido y estructura se transforman en una experiencia clara y lista para crecer.</p></div></li><li><span>04</span><div><h3>Lanzamos y cuidamos</h3><p>Tu web queda publicada y acompañada con el plan de mantenimiento que elijas.</p></div></li></ol></section>
 
       <section className="contact" id="precios"><p className="eyebrow">EMPECEMOS</p><h2>Tu proyecto cultural<br />puede ser <em>más fácil de encontrar.</em></h2><p>Cuéntame qué necesitas. La primera conversación no tiene coste y no te compromete a nada.</p><WhatsAppLink className="button button-primary button-large" message={marketMessage}>Escribir por WhatsApp <span aria-hidden="true">↗</span></WhatsAppLink><p className="phone">+34 624 463 748</p></section>
+      <section className="professional-profile" id="perfil" aria-labelledby="perfil-title">
+        <div className="profile-image-wrap"><img src="/daniela-profile.png" alt="Daniela Alzate en el foyer del Teatro Colón de Bogotá" /></div>
+        <div className="profile-copy">
+          <p className="eyebrow">PERFIL PROFESIONAL</p>
+          <h2 id="perfil-title">Daniela Alzate<br /><em>Gestión cultural con mirada digital.</em></h2>
+          <p>Profesional de las artes y del e-commerce, con más de diez años de experiencia en marketing, patrocinios, públicos y desarrollo de proyectos.</p>
+          <p>Es Máster en International Arts Management, programa conjunto de <strong>HEC Montréal, SDA Bocconi y Southern Methodist University</strong>, cursado entre Dallas, Milán y Montreal. Es también pianista, con Bachelor of Arts en Interpretación Musical de la Pontificia Universidad Javeriana.</p>
+          <div className="career-list" aria-label="Experiencia profesional seleccionada">
+            <div><span>Desde 2022</span><strong>CEO · Victa: Cuidado Personal</strong><p>Dirección de e-commerce, innovación tecnológica y contenidos para el crecimiento.</p></div>
+            <div><span>2019 — 2022</span><strong>Marketing Specialist · Teatro Mayor</strong><p>Campañas para venta de entradas, relación con públicos y contenidos digitales.</p></div>
+            <div><span>2016 — 2019</span><strong>Marketing Advisor · Teatro Colón Bogotá</strong><p>Plan comercial, patrocinios, alquiler de espacios y estrategia de ticketing.</p></div>
+            <div><span>2015 — 2016</span><strong>Sponsorship &amp; Fundraising · Teatro Mayor</strong><p>Alianzas, beneficios e informes para patrocinadores.</p></div>
+          </div>
+          <div className="profile-details"><span>España · Colombia</span><span>Teatros · festivales · formación artística</span></div>
+          <a className="profile-link" href="https://www.linkedin.com/in/daniela-alzate-afanador-840a89a5/" target="_blank" rel="noreferrer">Ver perfil en LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
       <footer><a href="#inicio" className="brand"><span className="brand-mark">D.A.A.</span><span className="brand-name">Daniela Alzate</span></a><p>Webs y estrategia digital para organizaciones culturales.</p><p>España · Colombia</p></footer>
     </main>
   );
