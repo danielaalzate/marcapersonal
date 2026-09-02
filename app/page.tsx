@@ -115,7 +115,8 @@ export default function Home() {
         <div className="market-switch" aria-label="Mercado y precios"><button className={market === "ES" ? "active" : ""} onClick={() => setMarket("ES")}>ES</button><span>/</span><button className={market === "CO" ? "active" : ""} onClick={() => setMarket("CO")}>CO</button></div>
       </header>
 
-      <section className="hero" id="inicio">
+      <section className="hero hero-video-hero" id="inicio">
+        <video className="hero-video-bg" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src="/teatro-hero.mp4" type="video/mp4" /></video>
         <div className="hero-copy">
           <p className="eyebrow">ESTRATEGIA · DISEÑO · CULTURA</p>
           <h1>Lo cultural merece <em>una presencia digital</em> a la altura de su valor.</h1>
