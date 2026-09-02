@@ -1,7 +1,7 @@
 :root{--magenta:#b1005f;--orange:#ff7a00;--yellow:#ffee49;--lime:#b2d235;--lime-pale:#e6f0b5;--blue-deep:#245f86;--blue-pale:#e0edf7;--charcoal:#545456}
 body{font-family:"Nunito Sans",Arial,sans-serif}
 .announcement{background:linear-gradient(90deg,var(--blue-deep) 0%,#3788bc 42%,var(--lime) 100%);color:var(--ink)}.announcement a{color:var(--ink);font-weight:800}
-.site-header{background:linear-gradient(90deg,#fffdf9 0%,#fffdf9 58%,var(--blue-pale) 58%,var(--blue-pale) 84%,var(--lime-pale) 84%,var(--lime-pale) 100%)}
+.site-header{background:#fff}
 .brand-name,.eyebrow{font-weight:800}.eyebrow{color:var(--blue-deep)}
 nav a{position:relative;padding-left:11px}nav a:before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;border-radius:50%;transform:translateY(-50%);background:var(--blue-deep)}nav a:nth-child(2):before{background:var(--lime)}nav a:nth-child(3):before{background:var(--wine)}nav a:nth-child(4):before{background:var(--orange)}
 .button-primary{background:var(--blue-deep)}.button-primary:hover{background:#174866}.text-link:hover{color:var(--blue-deep)}
