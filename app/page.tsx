@@ -151,7 +151,7 @@ export default function Home() {
           <p className="eyebrow">PERFIL PROFESIONAL</p>
           <h2 id="perfil-title">Daniela Alzate<br /><em>Gestión cultural con mirada digital.</em></h2>
           <p>Profesional de las artes y del e-commerce, con más de diez años de experiencia en marketing, patrocinios, públicos y desarrollo de proyectos.</p>
-          <p>Es Máster en International Arts Management, programa conjunto de <strong>HEC Montréal, SDA Bocconi y Southern Methodist University</strong>, cursado entre Dallas, Milán y Montreal. Cuenta con formación profesional en interpretación de piano clásico, con Bachelor of Arts en Interpretación Musical de la Pontificia Universidad Javeriana.</p>
+          <p>Es Máster en International Arts Management, programa conjunto de <strong>HEC Montréal, SDA Bocconi y Southern Methodist University</strong>, cursado entre Dallas, Milán y Montreal. Cuenta con formación profesional en interpretación de piano clásico y es Maestra en Música de la Pontificia Universidad Javeriana de Bogotá.</p>
           <div className="career-list" aria-label="Experiencia profesional seleccionada">
             <div><span>Desde 2022</span><strong>CEO · Victa: Cuidado Personal</strong><p>Dirección de e-commerce, innovación tecnológica y contenidos para el crecimiento.</p></div>
             <div><span>2019 — 2022</span><strong>Marketing Specialist · Teatro Mayor</strong><p>Campañas para venta de entradas, relación con públicos y contenidos digitales.</p></div>
