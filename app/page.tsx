@@ -11,8 +11,8 @@ const marketCopy = {
   CO: { name: "Colombia", basic: "COP 550.000", editable: "COP 700.000", commerce: "COP 5.500.000", basicMonthly: "COP 80.000/mes", editableMonthly: "COP 120.000/mes" },
 };
 
-function WhatsAppLink({ children, message, className = "" }: { children: React.ReactNode; message: string; className?: string }) {
-  return <a className={className} href={`${whatsappBase}${encodeURIComponent(message)}`} target="_blank" rel="noreferrer">{children}</a>;
+function WhatsAppLink({ children, message, className = "", ariaLabel }: { children: React.ReactNode; message: string; className?: string; ariaLabel?: string }) {
+  return <a aria-label={ariaLabel} className={className} href={`${whatsappBase}${encodeURIComponent(message)}`} target="_blank" rel="noreferrer">{children}</a>;
 }
 
 function NetworkField() {
@@ -144,7 +144,6 @@ export default function Home() {
 
       <section className="process" id="proceso"><div className="process-intro"><p className="eyebrow">04 — CÓMO TRABAJAMOS</p><h2>De la conversación<br />a la pantalla.</h2></div><ol><li><span>01</span><div><h3>Conversamos</h3><p>Una primera conversación gratuita para entender tu organización, tu público y tus objetivos.</p></div></li><li><span>02</span><div><h3>Definimos la propuesta</h3><p>Recibes un alcance, calendario e inversión construidos para lo que realmente necesitas.</p></div></li><li><span>03</span><div><h3>Creamos y afinamos</h3><p>Diseño, contenido y estructura se transforman en una experiencia clara y lista para crecer.</p></div></li><li><span>04</span><div><h3>Lanzamos y cuidamos</h3><p>Tu web queda publicada y acompañada con el plan de mantenimiento que elijas.</p></div></li></ol></section>
 
-      <section className="contact" id="precios"><p className="eyebrow">EMPECEMOS</p><h2>Tu proyecto cultural<br />puede ser <em>más fácil de encontrar.</em></h2><p>Cuéntame qué necesitas. La primera conversación no tiene coste y no te compromete a nada.</p><WhatsAppLink className="button button-primary button-large" message={marketMessage}>Escribir por WhatsApp <span aria-hidden="true">↗</span></WhatsAppLink><p className="phone">+34 624 463 748</p></section>
       <section className="professional-profile" id="perfil" aria-labelledby="perfil-title">
         <div className="profile-image-wrap"><img src="/daniela-profile.png" alt="Daniela Alzate en el foyer del Teatro Colón de Bogotá" /></div>
         <div className="profile-copy">
@@ -162,6 +161,7 @@ export default function Home() {
           <a className="profile-link" href="https://www.linkedin.com/in/daniela-alzate-afanador-840a89a5/" target="_blank" rel="noreferrer">Ver perfil en LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </section>
+      <WhatsAppLink className="whatsapp-float" message={marketMessage} ariaLabel="Escribir a Daniela por WhatsApp"><span aria-hidden="true">◔</span><span>WhatsApp</span></WhatsAppLink>
       <footer><a href="#inicio" className="brand"><span className="brand-mark">D.A.A.</span><span className="brand-name">Daniela Alzate</span></a><p>Webs y estrategia digital para organizaciones culturales.</p><p>España · Colombia</p></footer>
     </main>
   );
