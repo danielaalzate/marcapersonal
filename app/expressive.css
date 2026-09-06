@@ -3,7 +3,7 @@
 body{font-family:var(--sans-display)}
 h1,h2,h3,.brand-mark,.hero-monogram,.intro-band,.card-index,.strategy-mark,.large-quote,.experience-list strong,.process li>span,.process h3,.service-card h3,.profile-copy h2,.career-list strong{font-family:var(--sans-display);font-weight:500}
 .eyebrow,.brand-name,nav,.market-switch,.button,.announcement,.experience-list span,.profile-details span,.profile-link{font-family:var(--sans-geometric)}
-.announcement{background:linear-gradient(90deg,var(--blue-deep) 0%,#3788bc 42%,var(--lime) 100%);color:var(--ink)}.announcement a{color:var(--ink);font-weight:800}
+.announcement{background:linear-gradient(90deg,var(--blue-deep) 0%,#3788bc 42%,var(--lime) 100%);color:#fff}.announcement a{color:#fff;font-weight:800}
 .site-header{background:#fff}
 .brand-name,.eyebrow{font-weight:800}.eyebrow{color:var(--blue-deep)}
 nav a{position:relative;padding-left:11px}nav a:before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;border-radius:50%;transform:translateY(-50%);background:var(--blue-deep)}nav a:nth-child(2):before{background:var(--lime)}nav a:nth-child(3):before{background:var(--wine)}nav a:nth-child(4):before{background:var(--orange)}
