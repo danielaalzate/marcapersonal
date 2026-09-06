@@ -1,5 +1,8 @@
 :root{--magenta:#b1005f;--orange:#ff7a00;--yellow:#ffee49;--lime:#b2d235;--lime-pale:#e6f0b5;--blue-deep:#245f86;--blue-pale:#e0edf7;--charcoal:#545456}
-body{font-family:"Nunito Sans",Arial,sans-serif}
+:root{--sans-display:"Helvetica Neue",Helvetica,Arial,sans-serif;--sans-geometric:"Century Gothic",CenturyGothic,Futura,"Helvetica Neue",Arial,sans-serif}
+body{font-family:var(--sans-display)}
+h1,h2,h3,.brand-mark,.hero-monogram,.intro-band,.card-index,.strategy-mark,.large-quote,.experience-list strong,.process li>span,.process h3,.service-card h3,.profile-copy h2,.career-list strong{font-family:var(--sans-display);font-weight:500}
+.eyebrow,.brand-name,nav,.market-switch,.button,.announcement,.experience-list span,.profile-details span,.profile-link{font-family:var(--sans-geometric)}
 .announcement{background:linear-gradient(90deg,var(--blue-deep) 0%,#3788bc 42%,var(--lime) 100%);color:var(--ink)}.announcement a{color:var(--ink);font-weight:800}
 .site-header{background:#fff}
 .brand-name,.eyebrow{font-weight:800}.eyebrow{color:var(--blue-deep)}
