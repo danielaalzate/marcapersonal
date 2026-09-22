@@ -155,9 +155,9 @@ export default function Home() {
           <p>Es Máster en International Arts Management, programa conjunto de <strong>HEC Montréal, SDA Bocconi y Southern Methodist University</strong>, cursado entre Dallas, Milán y Montreal. Cuenta con formación profesional en interpretación de piano clásico y es Maestra en Música de la Pontificia Universidad Javeriana de Bogotá.</p>
           <div className="career-list" aria-label="Experiencia profesional seleccionada">
             <div><span>Desde 2022</span><strong>CEO · Victa: Cuidado Personal</strong><p>Dirección de e-commerce, innovación tecnológica y contenidos para el crecimiento.</p></div>
-            <div><span>2019 — 2022</span><strong>Marketing Specialist · Teatro Mayor</strong><p>Campañas para venta de entradas, relación con públicos y contenidos digitales.</p></div>
+            <div><span>2019 — 2022</span><strong>Marketing Specialist · Teatro Mayor Julio Mario Santo Domingo</strong><p>Campañas para venta de entradas, relación con públicos y contenidos digitales.</p></div>
             <div><span>2016 — 2019</span><strong>Marketing Advisor · Teatro Colón Bogotá</strong><p>Plan comercial, patrocinios, alquiler de espacios y estrategia de ticketing.</p></div>
-            <div><span>2015 — 2016</span><strong>Sponsorship &amp; Fundraising · Teatro Mayor</strong><p>Alianzas, beneficios e informes para patrocinadores.</p></div>
+            <div><span>2015 — 2016</span><strong>Sponsorship &amp; Fundraising · Teatro Mayor Julio Mario Santo Domingo</strong><p>Alianzas, beneficios e informes para patrocinadores.</p></div>
           </div>
           <div className="profile-details"><span>España · Colombia</span><span>Teatros · festivales · formación artística</span></div>
           <a className="profile-link" href="https://www.linkedin.com/in/daniela-alzate-afanador-840a89a5/" target="_blank" rel="noreferrer">Ver perfil en LinkedIn <span aria-hidden="true">↗</span></a>
