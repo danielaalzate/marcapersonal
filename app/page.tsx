@@ -9,7 +9,7 @@ const whatsappBase = "https://wa.me/34624463748?text=";
 
 const marketCopy = {
   ES: { name: "España", basic: "250 €", editable: "350 €", commerce: "2.000 €", basicMonthly: "20 €/mes", editableMonthly: "30 €/mes" },
-  CO: { name: "Colombia", basic: "COP 550.000", editable: "COP 700.000", commerce: "COP 5.500.000", basicMonthly: "COP 80.000/mes", editableMonthly: "COP 120.000/mes" },
+  CO: { name: "Colombia", basic: "COP 680.000", editable: "COP 700.000", commerce: "COP 5.500.000", basicMonthly: "COP 80.000/mes", editableMonthly: "COP 120.000/mes" },
 };
 
 function WhatsAppLink({ children, message, className = "", ariaLabel }: { children: React.ReactNode; message: string; className?: string; ariaLabel?: string }) {
