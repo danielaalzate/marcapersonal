@@ -60,6 +60,8 @@ nav a{position:relative;padding-left:11px}nav a:before{content:"";position:absol
 .client-project-icon:hover{transform:translateY(-3px)}
 .client-project-icon:focus-visible{outline:2px solid var(--blue-deep);outline-offset:-4px}
 .single-project{grid-template-columns:minmax(0,1fr)}
+.single-project .client-logo{align-items:flex-start;text-align:left}
+.single-project .client-project-icon{place-items:center start}
 .single-project .client-project-text{max-width:340px;border-right:0}
 .client-project-text:focus-visible{outline:2px solid var(--blue-deep);outline-offset:-4px}
 .footer-identity{display:flex;align-items:center;gap:16px}.copyright{white-space:nowrap;color:#d8e4e9;font-family:var(--sans-geometric);font-size:10px;font-weight:800;letter-spacing:.05em}
