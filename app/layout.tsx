@@ -33,6 +33,10 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
   openGraph: {
     title: "Daniela Alzate | Estrategia digital para la cultura",
     description: "Páginas web y estrategia digital para organizaciones culturales en España y Colombia.",
