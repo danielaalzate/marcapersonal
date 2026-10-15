@@ -28,3 +28,32 @@ nav a{position:relative;padding-left:11px}nav a:before{content:"";position:absol
 @media(max-width:850px){.whatsapp-float{right:16px;bottom:16px;width:46px;height:46px}}
 @media(max-width:850px){.language-switch{margin-left:auto}.pricing-switch{margin:24px 0 -18px}.pricing-switch button{min-height:40px}}
 @media(prefers-reduced-motion:reduce){.client-logo,.whatsapp-float,.button{transition:none!important}}
+
+/* Persistent navigation and client-project categories */
+.site-header{position:sticky;top:0;z-index:40;box-shadow:0 1px 0 rgba(24,40,50,.12);transition:box-shadow .2s ease}
+.site-header nav .nav-home:before{background:var(--wine)}
+.site-header nav a[href="#servicios"]:before{background:var(--blue-deep)}
+.site-header nav a[href="#trayectoria"]:before{background:var(--lime)}
+.site-header nav a[href="#clientes"]:before{background:var(--wine)}
+.site-header nav a[href="#proceso"]:before{background:var(--orange)}
+.client-categories{display:grid;gap:30px}
+.client-category{border-top:1px solid rgba(36,95,134,.35)}
+.client-category:last-child{border-bottom:1px solid rgba(36,95,134,.35)}
+.client-category-heading{display:flex;gap:14px;align-items:baseline;padding:17px 0 13px}
+.client-category-heading .eyebrow{margin:0;color:var(--blue-deep)}
+.client-category-heading h3{margin:0;font-family:var(--sans-display);font-size:clamp(20px,2vw,27px);font-weight:500;letter-spacing:-.03em}
+.client-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(36,95,134,.25)}
+.client-projects>*{min-width:0;min-height:144px;padding:20px;border-right:1px solid rgba(36,95,134,.25)}
+.client-projects>*:last-child{border-right:0}
+.client-projects .client-logo{min-width:0}
+.client-projects .borboleta-logo img{width:min(100%,190px);max-height:82px}
+.client-projects .maria-paula-logo img{width:min(100%,126px);max-height:82px}
+.client-project-text{display:flex;flex-direction:column;justify-content:center;gap:8px;color:var(--ink);transition:transform .2s ease,color .2s ease}
+.client-project-text:hover{transform:translateY(-3px);color:var(--blue-deep)}
+.client-project-text span{font-family:var(--sans-geometric);font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--blue-deep)}
+.client-project-text strong{font-family:var(--sans-display);font-size:clamp(19px,1.7vw,25px);font-weight:500;line-height:1.08;letter-spacing:-.03em}
+.client-project-text em{font-family:var(--sans-geometric);font-size:11px;font-style:normal;font-weight:800;letter-spacing:.04em}
+.single-project{grid-template-columns:minmax(0,1fr)}
+.single-project .client-project-text{max-width:340px;border-right:0}
+.client-project-text:focus-visible{outline:2px solid var(--blue-deep);outline-offset:-4px}
+@media(max-width:850px){.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding:14px 5vw}.site-header .brand-name{display:none}.site-header nav{display:flex;grid-column:1/-1;order:3;width:100%;gap:17px;overflow-x:auto;padding:3px 0 5px;white-space:nowrap}.site-header nav a{flex:0 0 auto;font-size:12px}.language-switch{margin-left:0}.client-categories{gap:24px}.client-category-heading{padding:15px 0 12px}.client-category-heading h3{font-size:21px}.client-projects{grid-template-columns:1fr}.client-projects>*{min-height:112px;border-right:0;border-bottom:1px solid rgba(36,95,134,.25)}.client-projects>*:last-child{border-bottom:0}.client-projects .borboleta-logo img{max-height:70px}.client-projects .maria-paula-logo img{max-height:74px}.single-project{grid-template-columns:1fr}.single-project .client-project-text{max-width:none}}
