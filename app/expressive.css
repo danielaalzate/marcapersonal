@@ -54,6 +54,10 @@ nav a{position:relative;padding-left:11px}nav a:before{content:"";position:absol
 .client-project-text strong{font-family:var(--sans-display);font-size:clamp(19px,1.7vw,25px);font-weight:500;line-height:1.08;letter-spacing:-.03em}
 .client-project-text em{font-family:var(--sans-geometric);font-size:11px;font-style:normal;font-weight:800;letter-spacing:.04em}
 .client-project-name-only{align-items:center;text-align:center}
+.client-project-icon{display:grid;place-items:center;min-height:144px;padding:20px;border-right:1px solid rgba(36,95,134,.25);transition:transform .2s ease,background .2s ease}
+.client-project-icon img{display:block;width:68px;height:68px;object-fit:contain}
+.client-project-icon:hover{transform:translateY(-3px);background:rgba(255,253,249,.45)}
+.client-project-icon:focus-visible{outline:2px solid var(--blue-deep);outline-offset:-4px}
 .single-project{grid-template-columns:minmax(0,1fr)}
 .single-project .client-project-text{max-width:340px;border-right:0}
 .client-project-text:focus-visible{outline:2px solid var(--blue-deep);outline-offset:-4px}
