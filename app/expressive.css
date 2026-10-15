@@ -53,6 +53,7 @@ nav a{position:relative;padding-left:11px}nav a:before{content:"";position:absol
 .client-project-text span{font-family:var(--sans-geometric);font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--blue-deep)}
 .client-project-text strong{font-family:var(--sans-display);font-size:clamp(19px,1.7vw,25px);font-weight:500;line-height:1.08;letter-spacing:-.03em}
 .client-project-text em{font-family:var(--sans-geometric);font-size:11px;font-style:normal;font-weight:800;letter-spacing:.04em}
+.client-project-name-only{align-items:center;text-align:center}
 .single-project{grid-template-columns:minmax(0,1fr)}
 .single-project .client-project-text{max-width:340px;border-right:0}
 .client-project-text:focus-visible{outline:2px solid var(--blue-deep);outline-offset:-4px}
