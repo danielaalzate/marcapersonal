@@ -106,6 +106,7 @@ export default function Home() {
   const [language, setLanguage] = useState<Language>("ES");
   const [market, setMarket] = useState<Market>("ES");
   const [showHomeLink, setShowHomeLink] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const isEnglish = language === "EN";
   const pricing = marketCopy[market];
   const marketMessage = useMemo(() => isEnglish ? "Hello Daniela, I would like to talk about my cultural project." : `Hola Daniela, visito tu web desde ${pricing.name} y me gustaría hablar sobre mi proyecto cultural.`, [isEnglish, pricing.name]);
@@ -126,7 +127,8 @@ export default function Home() {
       <div className="announcement"><span>{isEnglish ? "Web creation and digital strategy for culture" : "Creación web y estrategia digital para la cultura"}</span><WhatsAppLink message={marketMessage}>{isEnglish ? "Free first conversation" : "Primera conversación gratuita"} <span aria-hidden="true">↗</span></WhatsAppLink></div>
       <header className="site-header">
         <a href="#inicio" className="brand" aria-label={isEnglish ? "Daniela Alzate, home" : "Daniela Alzate, inicio"}><span className="brand-mark">D.A.A.</span><span className="brand-name">Daniela Alzate</span></a>
-        <nav aria-label={isEnglish ? "Main navigation" : "Navegación principal"}>{showHomeLink && <a className="nav-home" href="#inicio">{isEnglish ? "Home" : "Inicio"}</a>}<a href="#servicios">{isEnglish ? "Services" : "Servicios"}</a><a href="#trayectoria">{isEnglish ? "Experience" : "Trayectoria"}</a><a href="#clientes">{isEnglish ? "Clients" : "Clientes"}</a><a href="#proceso">{isEnglish ? "Process" : "Proceso"}</a></nav>
+        <button type="button" className={`menu-toggle${menuOpen ? " is-open" : ""}`} aria-controls="site-navigation" aria-expanded={menuOpen} aria-label={menuOpen ? (isEnglish ? "Close menu" : "Cerrar menú") : (isEnglish ? "Open menu" : "Abrir menú")} onClick={() => setMenuOpen((open) => !open)}><span /><span /><span /></button>
+        <nav id="site-navigation" className={menuOpen ? "is-open" : ""} aria-label={isEnglish ? "Main navigation" : "Navegación principal"}>{showHomeLink && <a className="nav-home" href="#inicio" onClick={() => setMenuOpen(false)}>{isEnglish ? "Home" : "Inicio"}</a>}<a href="#servicios" onClick={() => setMenuOpen(false)}>{isEnglish ? "Services" : "Servicios"}</a><a href="#trayectoria" onClick={() => setMenuOpen(false)}>{isEnglish ? "Experience" : "Trayectoria"}</a><a href="#clientes" onClick={() => setMenuOpen(false)}>{isEnglish ? "Clients" : "Clientes"}</a><a href="#proceso" onClick={() => setMenuOpen(false)}>{isEnglish ? "Process" : "Proceso"}</a></nav>
         <div className="language-switch" aria-label={isEnglish ? "Language" : "Idioma"}><button type="button" className={!isEnglish ? "active" : ""} aria-pressed={!isEnglish} onClick={() => setLanguage("ES")}>ES</button><span>/</span><button type="button" className={isEnglish ? "active" : ""} aria-pressed={isEnglish} onClick={() => setLanguage("EN")}>EN</button></div>
       </header>
 
