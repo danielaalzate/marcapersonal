@@ -59,13 +59,15 @@ nav a{position:relative;padding-left:11px}nav a:before{content:"";position:absol
 .client-project-icon img{display:block;width:68px;height:68px;object-fit:contain}
 .client-project-icon:hover{transform:translateY(-3px)}
 .client-project-icon:focus-visible{outline:2px solid var(--blue-deep);outline-offset:-4px}
+.writers-projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pending-client-icon img{width:72px;height:72px;border-radius:0;object-fit:cover}
 .single-project{grid-template-columns:minmax(0,1fr)}
 .single-project .client-logo{align-items:flex-start;text-align:left}
 .single-project .client-project-icon{place-items:center start}
 .single-project .client-project-text{max-width:340px;border-right:0}
 .client-project-text:focus-visible{outline:2px solid var(--blue-deep);outline-offset:-4px}
 .footer-identity{display:flex;align-items:center;gap:16px}.copyright{white-space:nowrap;color:#d8e4e9;font-family:var(--sans-geometric);font-size:10px;font-weight:800;letter-spacing:.05em}
-@media(max-width:850px){.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding:14px 5vw}.site-header .brand-name{display:none}.site-header nav{display:flex;grid-column:1/-1;order:3;width:100%;gap:17px;overflow-x:auto;padding:3px 0 5px;white-space:nowrap}.site-header nav a{flex:0 0 auto;font-size:12px}.language-switch{margin-left:0}.client-categories{gap:24px}.client-category-heading{padding:15px 0 12px}.client-category-heading h3{font-size:21px}.client-projects{grid-template-columns:1fr}.client-projects>*{min-height:112px;border-right:0;border-bottom:1px solid rgba(36,95,134,.25)}.client-projects>*:last-child{border-bottom:0}.client-projects .borboleta-logo img{max-height:70px}.client-projects .maria-paula-logo img{max-height:74px}.client-projects .compania-estable-logo img{max-height:76px}.single-project{grid-template-columns:1fr}.single-project .client-project-text{max-width:none}}
+@media(max-width:850px){.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding:14px 5vw}.site-header .brand-name{display:none}.site-header nav{display:flex;grid-column:1/-1;order:3;width:100%;gap:17px;overflow-x:auto;padding:3px 0 5px;white-space:nowrap}.site-header nav a{flex:0 0 auto;font-size:12px}.language-switch{margin-left:0}.client-categories{gap:24px}.client-category-heading{padding:15px 0 12px}.client-category-heading h3{font-size:21px}.client-projects,.writers-projects{grid-template-columns:1fr}.client-projects>*{min-height:112px;border-right:0;border-bottom:1px solid rgba(36,95,134,.25)}.client-projects>*:last-child{border-bottom:0}.client-projects .borboleta-logo img{max-height:70px}.client-projects .maria-paula-logo img{max-height:74px}.client-projects .compania-estable-logo img{max-height:76px}.single-project{grid-template-columns:1fr}.single-project .client-project-text{max-width:none}}
 @media(max-width:850px){.footer-identity{align-items:flex-start;flex-direction:column;gap:9px}.copyright{white-space:normal}}
 
 .menu-toggle{display:none}
