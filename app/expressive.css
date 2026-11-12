@@ -61,6 +61,8 @@ nav a{position:relative;padding-left:11px}nav a:before{content:"";position:absol
 .client-project-icon:focus-visible{outline:2px solid var(--blue-deep);outline-offset:-4px}
 .writers-projects{grid-template-columns:repeat(2,minmax(0,1fr))}
 .pending-client-icon img{width:72px;height:72px;border-radius:0;object-fit:cover}
+.client-projects .german-mejia-logo img{width:min(100%,190px);max-height:74px;object-fit:contain}
+.german-mejia-logo:hover{top:0}
 .single-project{grid-template-columns:minmax(0,1fr)}
 .single-project .client-logo{align-items:flex-start;text-align:left}
 .single-project .client-project-icon{place-items:center start}
